@@ -1,8 +1,9 @@
-header {
+.wrapper {
     display: flex;
     flex-direction: column;
-    padding: 0 10px;
     gap: 5px;
+    padding-bottom: 30px;
+    border-bottom: 4px solid #F2613F;
 }
 
 .header-ctn1 {
