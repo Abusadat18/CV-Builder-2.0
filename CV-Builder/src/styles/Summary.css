@@ -1,0 +1,22 @@
+.about-section {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+}
+
+.about-textarea {
+    resize: none;
+    border: 2px solid #0C0C0C;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+h3 {
+    font-size: 16px;
+}
+
+
+@media (max-width: 650px){
+    .about-section {
+        grid-template-columns: 1fr;
+    }
+}

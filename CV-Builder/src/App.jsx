@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import {Header} from './components'
+import {Header, Summary} from './components'
 
 
 function App() {
@@ -10,6 +10,7 @@ function App() {
   return (
     <>
       <Header isEditable={isEditable} setIsEditable={setIsEditable}/>
+      <Summary isEditable={isEditable}/>
     </>
   )
 }
