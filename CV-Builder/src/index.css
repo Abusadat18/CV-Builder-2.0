@@ -4,8 +4,26 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: Roboto;
+  src: url(../public/Fonts/Roboto/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: titleFont;
+  src: url(../public/Fonts/Tilt_Warp/TiltWarp-Regular-VariableFont_XROT\,YROT.ttf);
+}
+
+body {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
 #root {
   max-width: 1200px;
   border: 2px solid black;
   margin: 0 auto;
+}
+
+div {
+  font-size: 40px;
 }
