@@ -50,6 +50,10 @@
     padding: 5px;
 }
 
+.work-preview-descriptions {
+    padding-left: 30px;
+}
+
 @media (max-width: 650px){
     .work-section {
         grid-template-columns: 1fr;

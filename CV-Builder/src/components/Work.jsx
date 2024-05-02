@@ -77,7 +77,7 @@ function Work({isEditable}) {
                          onChange={(e) => updateWorkHistories(prevWork.id,modifyCurrentObj(prevWork, "company", e))} />
                 </div>
                 <div>
-                  <label htmlFor="location">Location:</label>
+                  <label htmlFor="location">Location: </label>
                   <input type="text" 
                          id="location"
                          value={prevWork.location}
@@ -100,7 +100,16 @@ function Work({isEditable}) {
                           onChange={(e) => updateWorkHistories(prevWork.id,modifyCurrentObj(prevWork, "exp3", e))}></textarea>
               </div>
             </> 
-            : "false"} 
+            : 
+            <>
+              <p className='work-preview-dates'>{prevWork.startDate} to {prevWork.jobStatus ? "Present" : prevWork.endDate}</p>
+              <p className='work-preview-jobAbout'><span className='work-preview-jobRole'>{prevWork.role}</span> | {prevWork.company} | {prevWork.location}</p>
+              <ul className='work-preview-descriptions'>
+                <li>{prevWork.exp1}</li>
+                <li>{prevWork.exp2}</li>
+                <li>{prevWork.exp3}</li>
+              </ul>
+            </>}
           </div>
         ))}
       </div>
