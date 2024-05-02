@@ -8,6 +8,7 @@ function Work({isEditable}) {
       id: Date.now(),
       startDate: "May 2018",
       endDate: "May 2020",
+      jobStatus: false,
       role: "Software Engineer",
       company: "Digital solutions xyz",
       location: "Kolkata",
@@ -41,34 +42,63 @@ function Work({isEditable}) {
                 </div>
                 <div>
                   <label htmlFor="endDate">End Date:</label>
-                  <input type="date" id="endDate" />
+                  <input type="date" 
+                         id="endDate"
+                         value={prevWork.endDate}
+                         onChange={(e) => updateWorkHistories(prevWork.id,modifyCurrentObj(prevWork, "endDate", e))} 
+                         disabled={prevWork.jobStatus}/>
                 </div>
                 <div>
                   <label htmlFor="currentDate">Present: </label>
-                  <input type="checkbox" id="currentDate" />
+                  <input type="checkbox" 
+                         id="currentDate"
+                         checked={prevWork.jobStatus}
+                         onChange={(e) => {
+                          let checkBox = e.target;
+                          checkBox.checked = !prevWork.jobStatus;
+                          updateWorkHistories(prevWork.id,{...prevWork, jobStatus: checkBox.checked})
+                          }
+                        } />
                 </div>
               </div>
               <div className="work-company-ctn">
                 <div>
                   <label htmlFor="workRole">Role: </label>
-                  <input type="text" id="workRole" />
+                  <input type="text" 
+                         id="workRole" 
+                         value={prevWork.role}
+                         onChange={(e) => updateWorkHistories(prevWork.id,modifyCurrentObj(prevWork, "role", e))}/>
                 </div>
                 <div>
                   <label htmlFor="companyName">Organization: </label>
-                  <input type="text" id="companyName" />
+                  <input type="text" 
+                         id="companyName"
+                         value={prevWork.company}
+                         onChange={(e) => updateWorkHistories(prevWork.id,modifyCurrentObj(prevWork, "company", e))} />
                 </div>
                 <div>
                   <label htmlFor="location">Location:</label>
-                  <input type="text" id="location" />
+                  <input type="text" 
+                         id="location"
+                         value={prevWork.location}
+                         onChange={(e) => updateWorkHistories(prevWork.id,modifyCurrentObj(prevWork, "location", e))} />
                 </div>
               </div>
               <div className='work-info'>
                 <p>Job Description/Achievements and Accomplishments:</p>
-                <textarea className='work-desc-textarea' placeholder='Description1'></textarea>
-                <textarea className='work-desc-textarea' placeholder='Description2'></textarea>
-                <textarea className='work-desc-textarea' placeholder='Description3'></textarea>
+                <textarea className='work-desc-textarea' 
+                          placeholder='Description1'
+                          value={prevWork.exp1}
+                          onChange={(e) => updateWorkHistories(prevWork.id,modifyCurrentObj(prevWork, "exp1", e))}></textarea>
+                <textarea className='work-desc-textarea' 
+                          placeholder='Description2'
+                          value={prevWork.exp2}
+                          onChange={(e) => updateWorkHistories(prevWork.id,modifyCurrentObj(prevWork, "exp2", e))}></textarea>
+                <textarea className='work-desc-textarea' 
+                          placeholder='Description3'
+                          value={prevWork.exp3}
+                          onChange={(e) => updateWorkHistories(prevWork.id,modifyCurrentObj(prevWork, "exp3", e))}></textarea>
               </div>
-              
             </> 
             : "false"} 
           </div>
