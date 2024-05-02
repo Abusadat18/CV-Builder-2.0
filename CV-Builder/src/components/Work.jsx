@@ -15,11 +15,15 @@ function Work({isEditable}) {
       exp1: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati, rerum.",
       exp2: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, natus provident! Architecto ab quidem eveniet magnam, sed illo quisquam expedita itaque quae excepturi doloremque quasi.",
       exp3: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quidem numquam itaque vitae veniam fugit nemo?",
-    }
+    },
 ])
 
   const updateWorkHistories = (id, workToUpdate) => {
     setWorkHistories((prevWorkHistories) => (prevWorkHistories.map((eachWork) => eachWork.id === id ? workToUpdate : eachWork)))
+  }
+
+  const deleteFromWorkHistory = (id) => {
+    setWorkHistories((prevWorkHistories) => (prevWorkHistories.filter((eachWork) => eachWork.id === id ? false : true)))
   }
   
   const modifyCurrentObj = (currObj, propertyToMod, e) => ({...currObj, [propertyToMod]: e.target.value})
@@ -99,6 +103,10 @@ function Work({isEditable}) {
                           value={prevWork.exp3}
                           onChange={(e) => updateWorkHistories(prevWork.id,modifyCurrentObj(prevWork, "exp3", e))}></textarea>
               </div>
+              <button className='workCard-close'
+                      onClick={(e) => deleteFromWorkHistory(prevWork.id)}>
+                <img src="../public/close-circle.svg" alt="close btn" width={30} />
+              </button>
             </> 
             : 
             <>
