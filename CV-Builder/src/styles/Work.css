@@ -6,6 +6,7 @@
 .work-card-ctn {
     display: flex;
     flex-direction: column;
+    gap: 10px;
 }
 
 .work-card {
@@ -62,6 +63,16 @@
     border: none;
     background: none;
     outline: none;
+    cursor: pointer;
+}
+
+.add-work-btn {
+    background-color: #F2613F;
+    color: #0C0C0C;
+    font-size: inherit;
+    padding: 8px 15px;
+    border-radius: 5px;
+    width: 120px;
     cursor: pointer;
 }
 

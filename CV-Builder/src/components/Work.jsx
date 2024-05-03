@@ -5,7 +5,7 @@ function Work({isEditable}) {
 
   const [workHistories, setWorkHistories] = useState([
     {
-      id: Date.now(),
+      id: 2,
       startDate: "May 2018",
       endDate: "May 2020",
       jobStatus: false,
@@ -17,6 +17,10 @@ function Work({isEditable}) {
       exp3: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quidem numquam itaque vitae veniam fugit nemo?",
     },
 ])
+
+  const addWorkInHistory = (workObj) => {
+    setWorkHistories((prevWorkHistories) => [...prevWorkHistories,workObj])
+  }
 
   const updateWorkHistories = (id, workToUpdate) => {
     setWorkHistories((prevWorkHistories) => (prevWorkHistories.map((eachWork) => eachWork.id === id ? workToUpdate : eachWork)))
@@ -105,7 +109,7 @@ function Work({isEditable}) {
               </div>
               <button className='workCard-close'
                       onClick={(e) => deleteFromWorkHistory(prevWork.id)}>
-                <img src="../public/close-circle.svg" alt="close btn" width={30} />
+                <img src="/close-circle.svg" alt="close btn" width={30} />
               </button>
             </> 
             : 
@@ -120,6 +124,9 @@ function Work({isEditable}) {
             </>}
           </div>
         ))}
+          {isEditable ? 
+          <button className="add-work-btn" onClick={() => addWorkInHistory({id: Date.now()})}>Add Work</button> 
+          : null }
       </div>
     </section>
   )
