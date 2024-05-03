@@ -47,7 +47,7 @@ function Header({isEditable, setIsEditable}) {
                 </div>
                 <div className='header-ctn2'>
                     <button className='toggle-btn' onClick={handleSubmit}><img src="/file-edit.svg" alt="edit" width={30} /></button>
-                    <button className='print-btn'><img src="/printer.svg" alt="print" width={30} /></button>   
+                    <button className='print-btn' onClick={() => window.print()}><img src="/printer.svg" alt="print" width={30} /></button>   
                 </div> 
             </div>
         ) }

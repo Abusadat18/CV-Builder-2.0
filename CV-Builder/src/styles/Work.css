@@ -12,7 +12,7 @@
 .work-card {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
     border: 3px solid #F2613F;
     border-radius: 5px;
     padding: 10px;
@@ -73,6 +73,14 @@
     border-radius: 5px;
     width: 140px;
     cursor: pointer;
+}
+
+.work-preview-dates {
+    color: hsl(0, 1%, 55%);
+}
+
+.work-preview-jobRole {
+    font-weight: bold;
 }
 
 @media (max-width: 650px){

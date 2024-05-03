@@ -6,12 +6,12 @@
 
 @font-face {
   font-family: Roboto;
-  src: url(../public/Fonts/Roboto/Roboto-Regular.ttf);
+  src: url(/Fonts/Roboto/Roboto-Regular.ttf);
 }
 
 @font-face {
   font-family: titleFont;
-  src: url(../public/Fonts/Tilt_Warp/TiltWarp-Regular-VariableFont_XROT\,YROT.ttf);
+  src: url(/Fonts/Tilt_Warp/TiltWarp-Regular-VariableFont_XROT\,YROT.ttf);
 }
 
 body {
@@ -25,4 +25,13 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+@media print {
+  .toggle-btn, .print-btn, .add-edu-btn, .add-work-btn {
+    visibility: hidden;
+  }
+  .education-card, .work-card {
+    border: none;
+  }
 }

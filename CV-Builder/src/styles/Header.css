@@ -30,11 +30,13 @@
 .input-name {
     font-size: 35px;
     border-radius: 5px;
+    padding: 2px 5px;
 }
 
 .input-add,.input-ph,.input-email {
     font-size: 18px;
     border-radius: 5px;
+    padding: 2px 5px;
 }
 
 /* ************** */
@@ -50,7 +52,7 @@ h1 {
 h2 {
     font-family: titleFont;
     font-size: 18px;
-    color: #a6a6a6;
+    color: hsl(0, 1%, 70%);
 }
 
 .header-ctn1 > h1 {
