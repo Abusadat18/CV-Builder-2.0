@@ -5,7 +5,7 @@
 
 .education-cards-ctn {
     display: flex;
-    flex: column;
+    flex-direction: column;
     gap: 10px;
 }
 
@@ -42,6 +42,16 @@
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
+}
+
+.add-edu-btn {
+    background-color: #F2613F;
+    color: #0C0C0C;
+    font-size: inherit;
+    padding: 8px 15px;
+    border-radius: 5px;
+    width: 140px;
+    cursor: pointer;
 }
 
 @media (max-width: 650px){

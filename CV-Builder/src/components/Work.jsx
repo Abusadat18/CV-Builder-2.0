@@ -108,7 +108,7 @@ function Work({isEditable}) {
                           onChange={(e) => updateWorkHistories(prevWork.id,modifyCurrentObj(prevWork, "exp3", e))}></textarea>
               </div>
               <button className='workCard-close'
-                      onClick={(e) => deleteFromWorkHistory(prevWork.id)}>
+                      onClick={() => deleteFromWorkHistory(prevWork.id)}>
                 <img src="/close-circle.svg" alt="close btn" width={30} />
               </button>
             </> 
