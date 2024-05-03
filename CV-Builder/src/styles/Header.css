@@ -1,22 +1,28 @@
 .wrapper {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr max-content;
     gap: 10px;
     padding-bottom: 30px;
     border-bottom: 5px solid #F2613F;
+    align-items: start;
 }
 
 .header-ctn1 {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
     gap: 10px;
+}
+
+.input-person-details {
+    display: flex;
+    gap: 15px;
     flex-wrap: wrap;
 }
 
 .header-ctn2 {
     display: flex;
     gap: 15px;
-    flex-wrap: wrap;
 }
 
 /* EDIT VIEW */
@@ -76,5 +82,14 @@ h2 {
     }
     body {
         font-size: 14px;
+    }
+    .toggle-btn > img,.print-btn > img {
+        width: 20px;
+    }
+}
+
+@media (max-width: 460px){
+    .wrapper {
+        grid-template-columns: 1fr;
     }
 }
