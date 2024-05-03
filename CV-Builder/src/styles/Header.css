@@ -1,15 +1,15 @@
 .wrapper {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 10px;
     padding-bottom: 30px;
-    border-bottom: 4px solid #F2613F;
+    border-bottom: 5px solid #F2613F;
 }
 
 .header-ctn1 {
     display: flex;
     justify-content: space-between;
-    gap: 15px;
+    gap: 10px;
     flex-wrap: wrap;
 }
 
@@ -47,15 +47,17 @@ h2 {
     color: #a6a6a6;
 }
 
+.header-ctn1 > h1 {
+    margin-right: auto;
+}
+
 /* ************** */
 
-.toggle-btn {
+.toggle-btn,.print-btn {
     background-color: #F2613F;
-    color: #0C0C0C;
     font-size: inherit;
     padding: 5px 15px;
     border-radius: 5px;
-    width: 100px;
     cursor: pointer;
 }
 

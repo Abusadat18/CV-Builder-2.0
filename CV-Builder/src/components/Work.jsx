@@ -3,20 +3,7 @@ import "../styles/Work.css"
 
 function Work({isEditable}) {
 
-  const [workHistories, setWorkHistories] = useState([
-    {
-      id: 2,
-      startDate: "May 2018",
-      endDate: "May 2020",
-      jobStatus: false,
-      role: "Software Engineer",
-      company: "Digital solutions xyz",
-      location: "Kolkata",
-      exp1: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati, rerum.",
-      exp2: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, natus provident! Architecto ab quidem eveniet magnam, sed illo quisquam expedita itaque quae excepturi doloremque quasi.",
-      exp3: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quidem numquam itaque vitae veniam fugit nemo?",
-    },
-])
+  const [workHistories, setWorkHistories] = useState([{id: 1}])
 
   const addWorkInHistory = (workObj) => {
     setWorkHistories((prevWorkHistories) => [...prevWorkHistories,workObj])

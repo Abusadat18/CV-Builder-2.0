@@ -3,18 +3,7 @@ import "../styles/Education.css"
 
 function Education({isEditable}) {
 
-  const [eduHistory, setEduHistory] = useState([
-    {
-      id: 1,
-      startDate: "",
-      endDate: "",
-      eduStatus: false,
-      degreeName: "Bachelor of Science",
-      subject: "Computer Science",
-      university: "NIT Durgapur",
-      location: "Durgapur"
-    }
-])
+  const [eduHistory, setEduHistory] = useState([{id: 10}])
 
 const addEduInHistory = (eduObj) => {
   setEduHistory((prevEduHistory) => [...prevEduHistory,eduObj])
