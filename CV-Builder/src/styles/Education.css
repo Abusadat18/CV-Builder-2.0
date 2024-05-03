@@ -1,0 +1,51 @@
+.education-section {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+}
+
+.education-cards-ctn {
+    display: flex;
+    flex: column;
+    gap: 10px;
+}
+
+.education-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 3px solid #F2613F;
+    border-radius: 5px;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+}
+
+.edu-dates-ctn {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.edu-dates-ctn > div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.edu-about-ctn {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.edu-college-ctn {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 650px){
+    .education-section {
+        grid-template-columns: 1fr;
+    }
+}
